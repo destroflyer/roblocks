@@ -69,7 +69,7 @@ public class MainApplication extends SimpleApplication {
         settings.setVSync(Settings.getBoolean("vsync"));
         settings.setFrameRate(Settings.getInt("frame_rate"));
         settings.setSamples(Settings.getInt("antialiasing"));
-        settings.setTitle("Roblocks - GameClient [Version 0.91]");
+        settings.setTitle("Roblocks [Version 1.0]");
         settings.setIcons(new BufferedImage[] {
             Util.getImage(ASSETS_ROOT + "interface/images/icon/16.png"),
             Util.getImage(ASSETS_ROOT + "interface/images/icon/32.png"),
