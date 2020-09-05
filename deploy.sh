@@ -13,5 +13,5 @@ mvn clean install
 rm -rf ${2}*
 mv assets ${2}
 mv target/libs ${2}
-mv target/birds-1.0.0.jar ${2}Roblocks.jar
+mv target/roblocks-1.0.0.jar ${2}Roblocks.jar
 curl https://destrostudios.com:8080/apps/2/updateFiles
