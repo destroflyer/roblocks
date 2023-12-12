@@ -17,4 +17,4 @@ rm -rf "${CLIENT}"*
 mv assets "${CLIENT}"
 mv target/libs "${CLIENT}"
 mv target/roblocks-1.0.0.jar "${CLIENT}Roblocks.jar"
-curl https://destrostudios.com:8080/apps/2/updateFiles
+curl -X POST https://destrostudios.com:8080/apps/2/updateFiles
