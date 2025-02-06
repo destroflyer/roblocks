@@ -7,16 +7,15 @@
     <version>1.0.0</version>
     <name>Roblocks</name>
     <description>Puzzle game, where the player navigates a robot through a block world via program steps, written using jMonkeyEngine 3.</description>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <version.jdom>2.0.6</version.jdom>
-        <version.jme3>3.2.1-stable</version.jme3>
-        <version.cubes>f57a9164812a16c628c7d9fd2988a45696b6bbe8</version.cubes>
+        <version.cubes>7fe07b7aa3d0d7569a381409e7073a36bc215e76</version.cubes>
+        <version.jdom>2.0.6.1</version.jdom>
+        <version.jme>3.6.1-stable</version.jme>
+        <version.maven-compiler-plugin>3.13.0</version.maven-compiler-plugin>
+        <version.maven-dependency-plugin>3.8.1</version.maven-dependency-plugin>
+        <version.maven-jar-plugin>3.4.2</version.maven-jar-plugin>
     </properties>
-
     <repositories>
         <repository>
             <id>jcenter</id>
@@ -27,38 +26,38 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
-
     <dependencies>
         <!--jMonkeyEngine-->
         <dependency>
             <groupId>org.jmonkeyengine</groupId>
             <artifactId>jme3-core</artifactId>
-            <version>${version.jme3}</version>
+            <version>${version.jme}</version>
         </dependency>
         <dependency>
             <groupId>org.jmonkeyengine</groupId>
-            <artifactId>jme3-lwjgl</artifactId>
-            <version>${version.jme3}</version>
+            <artifactId>jme3-lwjgl3</artifactId>
+            <version>${version.jme}</version>
         </dependency>
         <dependency>
             <groupId>org.jmonkeyengine</groupId>
             <artifactId>jme3-desktop</artifactId>
-            <version>${version.jme3}</version>
+            <version>${version.jme}</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.jmonkeyengine</groupId>
             <artifactId>jme3-effects</artifactId>
-            <version>${version.jme3}</version>
+            <version>${version.jme}</version>
         </dependency>
         <dependency>
             <groupId>org.jmonkeyengine</groupId>
             <artifactId>jme3-niftygui</artifactId>
-            <version>${version.jme3}</version>
+            <version>${version.jme}</version>
         </dependency>
         <dependency>
             <groupId>org.jmonkeyengine</groupId>
             <artifactId>jme3-jogg</artifactId>
-            <version>${version.jme3}</version>
+            <version>${version.jme}</version>
         </dependency>
         <!--JDOM-->
         <dependency>
@@ -73,12 +72,21 @@
             <version>${version.cubes}</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.maven-compiler-plugin}</version>
+                <configuration>
+                    <source>22</source>
+                    <target>22</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <version>${version.maven-dependency-plugin}</version>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>
@@ -95,6 +103,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>${version.maven-jar-plugin}</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -107,5 +116,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

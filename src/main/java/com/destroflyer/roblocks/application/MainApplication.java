@@ -76,6 +76,7 @@ public class MainApplication extends SimpleApplication {
             Util.getImage(ASSETS_ROOT + "interface/images/icon/64.png"),
             Util.getImage(ASSETS_ROOT + "interface/images/icon/128.png")
         });
+        settings.setGammaCorrection(false);
         setShowSettings(false);
         setPauseOnLostFocus(false);
     }
